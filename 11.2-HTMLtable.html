@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 11.2</title>
+    <style>      /* Defining table css style proerties*/
+    table, tr, td {
+        border: 1px solid black;
+    }
+    </style>
+    <script>    //JS Script to add new rows with two cells
+        var i=0;
+        function addRowToTable(){
+            var table=document.getElementById("dynamic-table"); //table with id dynamic-table is assigned to variable table
+            
+            var tr=table.insertRow(0); //adding tr the first row to the table
+            var td1=tr.insertCell(0); //as per request adding 2 tr tags with insertCell() method
+            var td2=tr.insertCell(1);
+            td1.innerHTML = "cell content1"; //to define cell contents
+            td2.innerHTML = "cell content2";
+            
+        }
+    </script>
+</head>
+<body>
+   <table id="dynamic-table" boder="10"  style="border-color:black;"></table> 
+   <br>
+   <input type="button" value="Add Row" onclick="addRowToTable()">
+</body>
+</html>
